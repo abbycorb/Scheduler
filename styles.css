@@ -75,4 +75,16 @@ label{
     text-align: center;
 }
 
+button{
+    width: 30%;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 125%;
+}
+
 p{}
