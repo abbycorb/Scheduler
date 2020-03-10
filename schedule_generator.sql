@@ -62,3 +62,30 @@ CREATE TABLE stud_availability (
                             REFERENCES availability (availabilityID)
                             ON DELETE CASCADE
 );
+
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 2-3', 'Monday', '2:00', '3:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 3-4', 'Monday', '3:00', '4:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 4-5', 'Monday', '4:00', '5:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 5-6', 'Monday', '5:00', '6:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 6-7', 'Monday', '6:00', '7:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 7-8', 'Monday', '7:00', '8:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Mon 8-9', 'Monday', '8:00', '9:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 2-3', 'Tuesday', '2:00', '3:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 3-4', 'Tuesday', '3:00', '4:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 4-5', 'Tuesday', '4:00', '5:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 5-6', 'Tuesday', '5:00', '6:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 6-7', 'Tuesday', '6:00', '7:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 7-8', 'Tuesday', '7:00', '8:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Tues 8-9', 'Tuesday', '8:00', '9:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 2-3', 'Wednesday', '2:00', '3:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 3-4', 'Wednesday', '3:00', '4:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 4-5', 'Wednesday', '4:00', '5:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 5-6', 'Wednesday', '5:00', '6:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 6-7', 'Wednesday', '6:00', '7:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 7-8', 'Wednesday', '7:00', '8:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 8-9', 'Wednesday', '8:00', '9:00');
+
+
+
+
+
