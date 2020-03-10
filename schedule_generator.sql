@@ -84,7 +84,20 @@ INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `en
 INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 6-7', 'Wednesday', '6:00', '7:00');
 INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 7-8', 'Wednesday', '7:00', '8:00');
 INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Wed 8-9', 'Wednesday', '8:00', '9:00');
-
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 2-3', 'Thursday', '2:00', '3:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 3-4', 'Thursday', '3:00', '4:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 4-5', 'Thursday', '4:00', '5:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 5-6', 'Thursday', '5:00', '6:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 6-7', 'Thursday', '6:00', '7:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 7-8', 'Thursday', '7:00', '8:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Thurs 8-9', 'Thursday', '8:00', '9:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 2-3', 'Friday', '2:00', '3:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 3-4', 'Friday', '3:00', '4:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 4-5', 'Friday', '4:00', '5:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 5-6', 'Friday', '5:00', '6:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 6-7', 'Friday', '6:00', '7:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 7-8', 'Friday', '7:00', '8:00');
+INSERT INTO `availability` (`availabilityID`, `day_available`, `start_time`, `end_time`) VALUES ('Fri 8-9', 'Friday', '8:00', '9:00');
 
 
 
