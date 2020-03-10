@@ -63,8 +63,9 @@ div {
     border-radius: 5px;
     background-color: darkred;
     padding: 20px;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
+
 }
 
 label{
@@ -87,4 +88,18 @@ button{
     font-size: 125%;
 }
 
-p{}
+p{
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+
+input[type=checkbox] {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+table, th, td, tr {
+    border: 1px solid black;
+    color: white;
+}

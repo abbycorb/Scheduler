@@ -3,7 +3,7 @@
 
 <?php
     require 'mysqli_connect.php';
-
+        /* queries will select all data from stud_availability table */
             $sql1="SELECT availabilityID FROM availability";
             $result1=$varConn->query($sql1);
             $sql2 = "SELECT studentID FROM student";
@@ -17,14 +17,9 @@
     <h1> Welcome to the automatic scheduler. </h1>
     <h2> Please fill out the form for your employee's availability.</h2>
 
-    <!-- this will be the form to enter employees availability:
-    Day
-    Start Time
-    End Time
-    SI ID
-   -->
     <div>
     <form action = "List.php" method = "POST">
+        <!-- creates dropdown list for student ID -->
         <label for="studentID"> Student ID </label>
             <select name= "studentID">
             <?php
@@ -34,6 +29,7 @@
                 }
             ?>
             </select>
+        <!-- creates dropdown list for availability ID -->
         <label for="availabilityID"> Availability ID </label>
             <select name= "availabilityID">
             <?php
@@ -48,5 +44,8 @@
     </form>
     </div>
 
+    <form action="dashboard.php">
+             <button type="submit">Back To Dashboard</button>
+    </form>
 </pre></body>
 </html>

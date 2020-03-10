@@ -10,29 +10,16 @@
 
     require_once('./mysqli_connect.php');
 
-
-         $studentID = (isset($_POST['studentID']) ? $_POST['studentID'] : '');
-         $availabilityID = (isset($_POST['availabilityID']) ? $_POST['availabilityID'] : '');
-
-         if(isset($_POST['Submit'])){
-             $sql_insert = "INSERT INTO stud_availability (studentID, availabilityID) VALUES (NULL , NULL)";
-             if($varConn->query($sql_insert)===TRUE){
-                  echo 'successful';
-             }
-             else{
-                  echo 'error <br>';
-             }
-         }
-
+        /* these queries will display all students information */
         $sql1="SELECT * FROM stud_availability";
         $result1=$varConn->query($sql1);
-        echo "<table>";
+        echo "<table border=1 style=\"top:15px; left:10px\">";
         echo "<tr><td>" . "Student ID" . "</td>";
         echo "<td>" . "Availability" . "</td></tr>";
         if ($result1->num_rows > 0) {
             // output data of each row
             while($row = $result1->fetch_assoc()) {
-                echo "<tr><td>" . $row['studentID'] . "</td><td>" . $row["availabilityID"] . "</td></tr>";
+                echo "<tr><td>" . $row['studentID'] . "</td><td>" . $row["availabilityID"] . "</td><td><a href = 'student.php'>Edit Student</td><td><a href = 'availability.php'> Add Availability</td></tr>";
             }
         }
         else {
