@@ -99,7 +99,11 @@ input[type=checkbox] {
     margin: 8px 0;
 }
 
-table, th, td, tr {
-    border: 1px solid black;
-    color: white;
+table{
+    border-collapse: collapse;
+    color: black;
+}
+th, tr, td{
+    color: black;
+    border: 1px solid black
 }

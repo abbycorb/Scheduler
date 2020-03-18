@@ -11,12 +11,12 @@
    </form>
 
    <!-- button to enter student -->
-   <form action="student.php">
+   <form action="Student.php">
    <button type="submit">Enter a Student</button>
    </form>
 
    <!-- button to enter availability -->
-   <form action="availability.php">
+   <form action="Availability.php">
    <button type="submit">Enter Availability</button>
    </form>
 </div>
