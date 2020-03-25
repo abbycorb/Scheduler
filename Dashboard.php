@@ -19,6 +19,11 @@
    <form action="Availability.php">
    <button type="submit">Enter Availability</button>
    </form>
+
+   <!-- button to enter availability -->
+   <form action="List.php">
+   <button type="submit">View Availabilities</button>
+   </form>
 </div>
 </pre></body>
 </html>

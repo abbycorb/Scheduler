@@ -41,6 +41,7 @@
 
 
             //*** MAKE SURE THESE VARIABLES MATCH VARIABLES IN YOUR DB ********//
+            //is there a way to ensure duplicate entries are not possible with this insertion?
             $query = "INSERT INTO stud_availability (studentID, availabilityID) VALUES ('$s_id', '$avail_id')";
 
             $stmt = mysqli_prepare($varConn, $query);
@@ -87,6 +88,8 @@
     if ($result1->num_rows > 0) {
         // output data of each row
         while($row = $result1->fetch_assoc()) {
+    //when the two hyperlinks are clicked, the student page
+    //and availability pages should automatically fill in the specific student clicked
          echo "<tr><td>" . $row['studentID'] . "</td><td>" . $row["availabilityID"] . "</td><td><a href = 'student.php'>Edit Student</td><td><a href = 'availability.php'> Add Availability</td></tr>";
         }
     }
@@ -104,6 +107,8 @@
       </form>
 </pre></body>
 </html>
+
+
 
 
 

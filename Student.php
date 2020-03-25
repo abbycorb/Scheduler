@@ -143,6 +143,7 @@
   $result1=$varConn->query($get_course);
 ?>
 
+
 <html>
 <body><pre>
     <div>
@@ -157,21 +158,41 @@
         <label for = "lname"> Last Name</label>
             <input type = "text" placeholder="Last Name" id = "lname" name = "lname">
         <label for="course"> Assigned Course </label>
-                    <select name = "course_name">
-                    <?php
-                    while($rows = $result1->fetch_assoc()){
-                        $course_name = $rows['course_name'];
-                        echo "<option value = '$course_name'>$course_name</option>";
-                    }
-                    ?>
-                    </select>
+            <select name = "course_name">
+             <?php
+                 while($rows = $result1->fetch_assoc()){
+                     $course_name = $rows['course_name'];
+                     echo "<option value = '$course_name'>$course_name</option>";
+                 }
+             ?>
+             </select>
 
-        <input type = "submit" name = "submit" value = "Add SI">
+            <input type = "submit" name = "submit" value = "Add SI">
     </form>
     </div>
 
-    <form action="dashboard.php">
-             <button type="submit">Back To Dashboard</button>
-    </form>
+    <?php
+        $sql1="SELECT studentId FROM student";
+        $result1=$varConn->query($sql1);
+    ?>
+    <!-- this form is to remove a student
+    after the submit "remove" has been clicked - the screen will redirect
+    to dashboard.php and delete the course that has been selected -->
+            <form action = "dashboard.php" method = "POST">
+            <label for="studentId"> Remove student? </label>
+            <select name= "studentId">
+            <?php
+                while($rows = $result1->fetch_assoc()){
+                    $studentId = $rows['studentId'];
+                    echo "<option value = '$studentId'>$studentId</option>";
+                }
+            ?>
+            </select>
+            <input type = "submit" name = "submit" value = "Remove Student">
+            </form>
+
+            <form action="dashboard.php">
+            <button type="submit">Back To Dashboard</button>
+            </form>
 </pre></body>
 </html>
