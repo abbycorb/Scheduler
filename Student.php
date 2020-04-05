@@ -22,6 +22,11 @@
   OR die(mysqli_connect_error() .
       'Could not connect to MySQL: ');
 
+  if(isset($_GET['id'])){
+    $studentID = $filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+  }
+
   if(isset($_POST['submit'])) {
       $data_missing = array();//keep track of items not entered in form
       $trash = array();
@@ -143,14 +148,13 @@
   $result1=$varConn->query($get_course);
 ?>
 
-
+<!-- BEGIN HTML -->
 <html>
 <body><pre>
     <div>
     <!-- form to enter students information - form will insert into the student table -->
 
     <form action = "Availability.php" method = "POST">
-
         <label for="studentid"> Student ID</label>
             <input type = "text" placeholder = "Student ID" id = "studentid" name = "studentid">
         <label for="fname"> First Name</label>
@@ -166,7 +170,7 @@
                  }
              ?>
              </select>
-
+            <!--THIS BUTTON SHOULD UPDATE THE STUDENT IF IT EXISTS -> BUT INSERT IF IT DOES NOT -->
             <input type = "submit" name = "submit" value = "Add SI">
     </form>
     </div>
@@ -175,12 +179,13 @@
         $sql1="SELECT studentId FROM student";
         $result1=$varConn->query($sql1);
     ?>
-    <!-- this form is to remove a student
-    after the submit "remove" has been clicked - the screen will redirect
+
+    <!-- this form is to remove a student after the submit "delete_student" has been clicked - the screen will redirect
     to dashboard.php and delete the course that has been selected -->
+
             <form action = "dashboard.php" method = "POST">
             <label for="studentId"> Remove student? </label>
-            <select name= "studentId">
+            <select name= "id">
             <?php
                 while($rows = $result1->fetch_assoc()){
                     $studentId = $rows['studentId'];
@@ -188,7 +193,8 @@
                 }
             ?>
             </select>
-            <input type = "submit" name = "submit" value = "Remove Student">
+            <!-- THIS BUTTON SHOULD REMOVE A SPECIFIC STUDENT -->
+            <input type = "submit" name = "delete_student" value = "Remove Student">
             </form>
 
             <form action="dashboard.php">

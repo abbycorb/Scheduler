@@ -28,7 +28,8 @@
    $sql1="SELECT course_name FROM course";
    $result1=$varConn->query($sql1);
 
-   ?>
+
+?>
 <html>
 <body><pre>
     <div>
@@ -54,25 +55,11 @@
         </form>
         </div>
 
-        <!-- this form is to remove a course
-            after the submit "remove" has been clicked - the screen will redirect
-            to dashboard.php and delete the course that has been selected -->
-        <form action = "dashboard.php" method = "POST">
-        <label for="course_name"> Remove course? </label>
-            <select name= "course_name">
-                 <?php
-                      while($rows = $result1->fetch_assoc()){
-                           $course_name = $rows['course_name'];
-                           echo "<option value = '$course_name'>$course_name</option>";
-                      }
-                 ?>
-            </select>
-            <input type = "submit" name = "submit" value = "Remove Course">
-        </form>
 
-        <form action="Dashboard.php">
+
+       <form action="Dashboard.php">
             <button type="submit">Back To Dashboard</button>
-        </form>
+       </form>
 
 </pre></body>
 </html>

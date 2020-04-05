@@ -49,7 +49,7 @@
             $affected_rows = mysqli_stmt_affected_rows($stmt);
 
             //********** ERROR CHECKING ***********//
-             if($affected_rows == 1){
+            if($affected_rows == 1){
                 echo 'Student Availability Entered';
                 mysqli_stmt_close($stmt);
                 mysqli_close($varConn);
@@ -88,9 +88,10 @@
     if ($result1->num_rows > 0) {
         // output data of each row
         while($row = $result1->fetch_assoc()) {
+        $studentID = $row['studentID'];
     //when the two hyperlinks are clicked, the student page
     //and availability pages should automatically fill in the specific student clicked
-         echo "<tr><td>" . $row['studentID'] . "</td><td>" . $row["availabilityID"] . "</td><td><a href = 'student.php'>Edit Student</td><td><a href = 'availability.php'> Add Availability</td></tr>";
+         echo "<tr><td>" . $row['studentID'] . "</td><td>" . $row["availabilityID"] . "</td><td><a href = 'student.php'> Edit Student</td><td><a href = 'availability.php'> Add Availability</td></tr>";
         }
     }
     else {
@@ -102,7 +103,7 @@
 
 <html>
 <body><pre>
-      <form action="schedule.html">
+      <form action="schedule.php">
          <button type="submit">Process Schedule</button>
       </form>
 </pre></body>

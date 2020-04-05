@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="styles.css">
 
 <?php
-
  //require_once('../mysqli_connect.php');
            DEFINE ('DB_USER', 'root');
            DEFINE ('DB_PASSWORD', '1234');//<------------ use your password
@@ -66,7 +65,7 @@
                $id = $row['courseID'];
            }
 
-           $sql_insert = "INSERT INTO student (studentID, first_name, last_name, assigned_courseID) VALUES (?, ?, ?, '$id')";
+           $sql_insert = "REPLACE INTO student (studentID, first_name, last_name, assigned_courseID) VALUES (?, ?, ?, '$id')";
            $stmt = mysqli_prepare($dbc, $sql_insert);
            mysqli_stmt_bind_param($stmt, 'iss', $s_id, $f_name, $l_name);
            mysqli_stmt_execute($stmt);
